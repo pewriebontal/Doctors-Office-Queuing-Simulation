@@ -1,6 +1,7 @@
 #include "doctors_office.h"
 
 doctors_office::doctors_office(int num_docs)
+	: num_doctors(num_docs)
 {
 	doctors.resize(num_docs);
 }
@@ -13,10 +14,10 @@ int doctors_office::get_free_doctor_ID() const
 	{
 		if(doctors[i].is_free())
 		{
-			return i;
+			return (i);
 		}
 	}
-	return -1;
+	return (-1);
 }
 
 int doctors_office::get_number_of_busy_doctors() const
@@ -29,7 +30,7 @@ int doctors_office::get_number_of_busy_doctors() const
 			count++;
 		}
 	}
-	return count;
+	return (count);
 }
 
 void doctors_office::set_doctor_busy(int doc_ID, const patient& pat, int app_time)
@@ -55,6 +56,7 @@ void doctors_office::update_doctors(int time)
 			doctors[i].decrement_remaining_appointment_time();
 			if(doctors[i].get_remaining_appointment_time() == 0)
 			{
+				display_appointment_done(i, doctors[i].get_current_patient_number(), time);
 				doctors[i].set_free();
 			}
 		}
