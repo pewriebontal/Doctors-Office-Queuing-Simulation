@@ -1,3 +1,11 @@
+/*
+ * doctors_office.cpp
+ * Written by : Min Thu Khaing (c3489993)
+ * Modified : 14/07/2024
+ *
+ * This class represents a doctor's office in a queuing system, mainly a wrapper for a vector of doctor objects.
+ * This file should be used in conjunction with Assignment 2 for SENG1120/SENG6120.
+ */
 #include "doctors_office.h"
 
 /**
@@ -24,7 +32,7 @@ doctors_office::~doctors_office()
 	// However, I am unsure if I will receive a mark reduction for not having
 	// any code in the destructor.
 	doctors.clear();
-    num_doctors = 0;
+	num_doctors = 0;
 }
 
 /**

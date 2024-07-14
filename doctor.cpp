@@ -1,3 +1,11 @@
+/*
+ * doctor.cpp
+ * Written by : Min Thu Khaing (c3489993)
+ * Modified : 14/07/2024
+ *
+ * This class represents a doctor in a queuing system.
+ * This file should be used in conjunction with Assignment 2 for SENG1120/SENG6120.
+ */
 #include "doctor.h"
 
 /**
@@ -17,7 +25,8 @@ doctor::doctor()
  * 
  * Postcondition: The doctor is destroyed.
  */
-doctor::~doctor() { 
+doctor::~doctor()
+{
 	remaining_appointment_time = 0;
 }
 
